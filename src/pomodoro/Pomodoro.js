@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classNames from "../utils/class-names";
 import useInterval from "../utils/useInterval";
-import Session from "./Session.js"
-import {minutesToDuration} from "../utils/duration"
+import Session from "./Session.js";
+import {minutesToDuration} from "../utils/duration";
 
 // These functions are defined outside of the component to insure they do not have access to state
 // and are, therefore more likely to be pure.
@@ -142,7 +142,6 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 data-testid="decrease-focus"
                 onClick={handleDecreaseFocus}
-                disabled={!isTimerRunning}
               >
                 <span className="oi oi-minus" />
               </button>
@@ -152,7 +151,6 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 data-testid="increase-focus"
                 onClick={handleIncreaseFocus}
-                disabled={!isTimerRunning}
               >
                 <span className="oi oi-plus" />
               </button>
@@ -173,7 +171,6 @@ function Pomodoro() {
                   className="btn btn-secondary"
                   data-testid="decrease-break"
                   onClick={handleDecreaseBreak}
-                  disabled={!isTimerRunning}
                 >
                   <span className="oi oi-minus" />
                 </button>
@@ -183,7 +180,6 @@ function Pomodoro() {
                   className="btn btn-secondary"
                   data-testid="increase-break"
                   onClick={handleIncreaseBreak}
-                  disabled={!isTimerRunning}
                 >
                   <span className="oi oi-plus" />
                 </button>
